@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Store from './redux/Store';
+import Store from './redux/store';
 import { Provider } from 'react-redux';
 
 const App = () => {
