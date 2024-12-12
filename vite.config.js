@@ -8,4 +8,7 @@ export default defineConfig({
     https:false
   },
   plugins: [react(),mkcert()],
+  build:{
+    outDir:'dist'
+  }
 })
