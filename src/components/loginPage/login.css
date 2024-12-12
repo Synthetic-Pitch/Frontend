@@ -1,0 +1,75 @@
+
+
+@property --rotate{
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+
+.submit-box{
+  position: relative;
+  left:10%;
+  height: 40px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-size: 4dvw;
+}
+.submit-box::before{
+  content: '';
+  position: absolute;
+
+  height: 110%;
+  width: 110%;
+  z-index: -1;
+  border-radius: 10px;
+  background-image: conic-gradient(from var(--rotate),#00c3ff,rgb(5, 5, 5));
+  filter: blur(3px);
+  animation: rotating 10s linear infinite;
+}
+
+@keyframes rotating{
+  0%{
+    --rotate:0deg;
+  }
+  100%{
+    --rotate:360deg;
+  }
+}
+
+.circle-icon{
+  animation: spinning 5s linear infinite;
+}
+
+@keyframes spinning{
+  0%{
+    transform: rotate(0deg) scale(1);
+    
+  }
+  50%{
+    transform: rotate(180deg) scale(1.5);
+   
+  }
+  80%{
+    transform: rotate(300deg) scale(1.2);
+  }
+  100%{
+    transform: rotate(360deg) scale(.9);
+    
+  }
+} 
+  
+
+
+@media screen and (min-width: 420px){
+  .submit-box{
+    font-size: 16px;
+  }
+}
+
+
